@@ -1,0 +1,840 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f5f0;
+    color:#222;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    width:100%;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:30px 80px;
+
+    background:rgba(247,245,240,0.95);
+
+    backdrop-filter:blur(10px);
+
+    z-index:999;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    font-family:'Cormorant Garamond',serif;
+}
+
+nav ul{
+    display:flex;
+    gap:40px;
+
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+
+    font-size:15px;
+
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#5c6a3d;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:120px 80px 80px;
+}
+
+.hero-text{
+
+    width:55%;
+}
+
+.hero-image{
+
+    width:40%;
+}
+
+.hero-image img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    opacity:0.85;
+}
+
+.hero h1{
+
+    font-size:90px;
+
+    line-height:0.95;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#2f2f2f;
+
+    margin-bottom:25px;
+}
+
+.hero-desc{
+
+    max-width:550px;
+
+    line-height:1.9;
+
+    color:#666;
+
+    margin-bottom:35px;
+}
+
+.hero-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#556b2f;
+
+    color:white;
+
+    border-radius:50px;
+
+    text-decoration:none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    nav{
+        padding:25px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero{
+        padding:140px 25px 50px;
+    }
+
+    .hero h1{
+        font-size:70px;
+    }
+
+    .hero-desc{
+        width:100%;
+    }
+
+    .hero-image{
+        height:350px;
+    }
+
+}
+
+/* ================= TEAM PAGE ================= */
+
+.team-header{
+
+    padding:160px 80px 60px;
+
+    text-align:center;
+}
+
+.team-header h1{
+
+    font-size:80px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+}
+
+.team-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#666;
+}
+
+.team-container{
+
+    padding:20px 80px 100px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+}
+
+.member{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.member:hover{
+
+    transform:translateY(-10px);
+}
+
+.member img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+}
+
+.member h2{
+
+    padding:25px 25px 10px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+}
+
+.member span{
+
+    padding:0 25px;
+
+    color:#556b2f;
+
+    font-weight:600;
+
+    display:block;
+}
+
+.member p{
+
+    padding:20px 25px 30px;
+
+    line-height:1.8;
+
+    color:#666;
+}
+
+@media(max-width:900px){
+
+    .team-container{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+    }
+
+}
+
+/* ================= ABOUT PAGE ================= */
+
+.about-header{
+
+    padding:160px 80px 80px;
+
+    text-align:center;
+}
+
+.about-header h1{
+
+    font-size:80px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+}
+
+.about-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#666;
+}
+
+.story{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:0 80px 100px;
+}
+
+.story h2{
+
+    font-size:55px;
+
+    margin-bottom:25px;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.story p{
+
+    line-height:2;
+
+    color:#666;
+}
+
+.vision-mission{
+
+    padding:0 80px 100px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+}
+
+.vision-box,
+.mission-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.vision-box h2,
+.mission-box h2{
+
+    margin-bottom:20px;
+
+    font-size:40px;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.mission-box ul{
+
+    padding-left:20px;
+}
+
+.mission-box li{
+
+    margin-bottom:15px;
+}
+
+.values{
+
+    padding:0 80px 100px;
+
+    text-align:center;
+}
+
+.values h2{
+
+    font-size:60px;
+
+    margin-bottom:50px;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.value-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.value-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.value-card h3{
+
+    margin-bottom:15px;
+}
+
+/* ================= BUSINESS ================= */
+
+.business-hero{
+
+    padding:160px 80px 100px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:60px;
+}
+
+.business-text{
+
+    width:50%;
+}
+
+.business-text h1{
+
+    font-size:90px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:25px;
+}
+
+.business-text p{
+
+    line-height:2;
+
+    color:#666;
+
+    margin-bottom:30px;
+}
+
+.shop-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    background:#556b2f;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+}
+
+.business-image{
+
+    width:45%;
+}
+
+.business-image img{
+
+    width:100%;
+
+    border-radius:20px;
+}
+
+.business-about{
+
+    padding:0 80px 100px;
+
+    text-align:center;
+}
+
+.business-about h2{
+
+    font-size:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+}
+
+.business-about p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:2;
+
+    color:#666;
+}
+
+.business-info{
+
+    padding:0 80px 100px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+}
+
+.info-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.featured-products{
+
+    padding:0 80px 100px;
+}
+
+.featured-products h2{
+
+    text-align:center;
+
+    font-size:60px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:50px;
+}
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.product-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+}
+
+.product-card h3{
+
+    padding:20px 20px 10px;
+}
+
+.product-card p{
+
+    padding:0 20px 20px;
+
+    color:#666;
+}
+
+/* ================= PROJECT ================= */
+
+.project-header{
+
+    padding:160px 80px 80px;
+
+    text-align:center;
+}
+
+.project-header h1{
+
+    font-size:80px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+}
+
+.project-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.project-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:0 80px 100px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+}
+
+.project-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.project-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:#e7ddd3;
+
+    color:#3b2a24;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+.project-card h2{
+
+    font-size:36px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:15px;
+}
+
+.project-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+.feature-list{
+
+    list-style:none;
+
+    margin-bottom:30px;
+}
+
+.feature-list li{
+
+    margin-bottom:12px;
+
+    color:#555;
+}
+
+.project-btn{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:#3b2a24;
+
+    color:white;
+
+    border-radius:40px;
+
+    transition:0.3s;
+}
+
+.project-btn:hover{
+
+    background:#241915;
+}
+
+@media(max-width:900px){
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+        padding:0 25px 80px;
+    }
+
+    .project-header{
+
+        padding:140px 25px 60px;
+    }
+
+    .project-header h1{
+
+        font-size:55px;
+    }
+}
+/* ================= CONTACT ================= */
+
+.contact-header{
+
+    padding:160px 80px 80px;
+
+    text-align:center;
+}
+
+.contact-header h1{
+
+    font-size:80px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:20px;
+}
+
+.contact-header p{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.contact-grid{
+
+    padding:0 80px 100px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+}
+
+.contact-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    transition:0.3s;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.contact-info{
+
+    flex:1;
+}
+
+.contact-info h2{
+
+    margin-bottom:12px;
+
+    font-size:32px;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.contact-info p{
+
+    margin-bottom:8px;
+
+    color:#666;
+}
+
+.contact-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+    border:4px solid #f5f5f5;
+}
